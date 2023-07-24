@@ -21,5 +21,5 @@ let accountSummary = function (account) {
 }
 addIncome(myAccount, 5000)
 addExpense(myAccount, 2)
-addExpense(myAccount, 30)
+addExpense(myAccount, 35)
 console.log(accountSummary(myAccount))
