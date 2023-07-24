@@ -25,6 +25,6 @@ let isValidPassword = function (password) {
     
 
 console.log(isValidPassword('abscd'))
-console.log(isValidPassword('aabcdfgkkkkk00l'))
+console.log(isValidPassword('aabcdfgkkkkk00lj'))
 console.log(isValidPassword('abscdhhh65password#$'))
 
