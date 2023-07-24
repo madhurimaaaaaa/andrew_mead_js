@@ -2,7 +2,7 @@
 
 let restaurant = {
     name: 'N Nepal',
-    guestCapacity: 72,
+    guestCapacity: 71,
     guestCount: 0,
     checkAvailability: function (partySize) {
         let seatsAvailable = this.guestCapacity - this.guestCount
