@@ -22,3 +22,41 @@ for (let count = notes.length - 1; count >= 0; count--) {
 }
 
 
+// many assignments pending in this file.
+// TODO(2023/07/29)
+
+const findNote = function (notes, noteTitle) {
+    return notes.find(function (note, index) {
+        return noteTitle === noteTitle
+
+    })
+    
+}
+const note = findNote(notes, 'Office')
+
+
+
+
+
+
+
+
+
+
+// const findNote = function (notes, noteTitle) {
+//     const index = notes.findIndex(function (note, index) {
+//        return noteTitle === noteTitle
+
+//     })
+//     return notes[index]
+// }
+// const note = findNote(notes, 'Office')
+
+
+
+
+
+const index = notes.findIndex(function (note, index) {
+    return note.title === 'ABCD'
+})
+console.log(index)
