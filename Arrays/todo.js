@@ -17,18 +17,6 @@ let todos = [{
     text: 'Do gym',
     completed: false
 }, {
-    text: 'Do gym',
-    completed: false
-}, {
-    text: 'Do gym',
-    completed: false
-}, {
-    text: 'Do gym',
-    completed: false
-}, {
-    text: 'Do gym',
-    completed: false
-}, {
     text: 'Do Coding',
     completed: true
 }]
@@ -89,8 +77,8 @@ const deleteAllTodo = function (todos, todoText) {
 }
 
 // deleteTodo(todos, 'Do gym')
-todos = deleteAllMatchingTodos(todos, 'Do gym')
-console.log(todos)
+after_delete_todos = deleteAllMatchingTodos(todos, 'Do gym')
+console.log(after_delete_todos)
 
 
 /**
@@ -105,4 +93,35 @@ console.log(todos)
  * 
  */
 
+const getThingsToDo = function (todo, todoText) {
+    return todo.filter(function (todo) {
+        return todo.completed === false
 
+    }
+    )}
+    //console.log(getThingsToDo(todos))
+
+    const sortTodos = function (todos) {
+        todos.sort(function (todoOne, todoTwo) {
+            // we have 4 cases, TT, FF, FT, TF
+            if(todoOne.completed === todoTwo.completed) return 0
+            // TT FF are gone. only TF and FT are possible now.
+
+            // If i have FT, i want -1. if i have TF, i want 1.
+            // If i check todoOne.completed === true, then it is TF for sure
+            // (because TT is not possible here)
+            if (todoOne.completed) {
+                // So this one is TF for sure.
+                return 1
+            } 
+
+            // Now TF is also not possible, so only FT remains.
+            return -1
+        })
+        
+    }
+    
+    sortTodos(todos)
+
+    console.log("Output for SortByCompletion")
+    console.log(todos)

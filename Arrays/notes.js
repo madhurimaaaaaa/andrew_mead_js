@@ -27,3 +27,4 @@ const index = notes.findIndex(function (note, index) {
 
 })
 console.log(index)
+ 
